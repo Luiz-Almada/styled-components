@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styled, { ThemeProvider, css, keyframes } from 'styled-components';
 
 type TStyledButtonPropos = {
-  varient?: "success" | "failed"
+  variant?: "success" | "failed"
 }
 
 const RotateKeyFrame = keyframes`
@@ -61,14 +61,14 @@ const StyledButton = styled.button<TStyledButtonPropos>`
 
    ${(props) => {
     // console.log(props);
-    if (props.varient === "success"){
+    if (props.variant === "success"){
       return css`
         border-color: green;
         color: green;
       `
     }
 
-    if (props.varient === "failed"){
+    if (props.variant === "failed"){
       return css`
         border-color: red;
         color: red;
@@ -94,8 +94,8 @@ function App() {
         
         {/* <Rotate>Teste</Rotate> */}
         
-        <StyledButton varient="success">Adicionar</StyledButton>
-        <StyledButton varient="failed" style={{marginLeft: "8px"}}>Remover</StyledButton>
+        <StyledButton variant="success">Adicionar</StyledButton>
+        <StyledButton variant="failed" style={{marginLeft: "8px"}}>Remover</StyledButton>
         <StyledButton style={{marginLeft: "8px"}}>Detalhes</StyledButton>
       </ThemeProvider>
     </div>
