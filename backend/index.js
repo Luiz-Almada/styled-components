@@ -60,7 +60,3 @@ app.get("/spa", (req, res) => {
 app.listen(port, () => {
   console.log(`Server run in port ${port}`)
 })
-
-app.get("/csr", (req, res) => {
-
-});
